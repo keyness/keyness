@@ -12,4 +12,21 @@
         <servlet-name>coreServlet</servlet-name>
         <url-pattern>/coreServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>initServlet</servlet-name>
+        <servlet-class>
+            com.keyness.servlet.InitServlet
+        </servlet-class>
+        <!-- 配置获取access_token所需参数appid和appsecret -->
+        <init-param>
+            <param-name>appid</param-name>
+            <param-value>appid</param-value>
+        </init-param>
+        <init-param>
+            <param-name>appsecret</param-name>
+            <param-value>appsecret</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
 </web-app>
